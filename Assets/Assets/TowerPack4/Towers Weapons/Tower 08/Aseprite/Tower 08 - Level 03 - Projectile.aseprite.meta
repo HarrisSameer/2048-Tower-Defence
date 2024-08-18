@@ -1,0 +1,615 @@
+fileFormatVersion: 2
+guid: e3586939c3e624f4d99be77ec3b05962
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Tower 08 - Level 03 - Projectile_Frame_0
+    originalName: 
+    pivot: {x: 0.50000006, y: -3.0000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 755
+      width: 26
+      height: 47
+    spriteID: c25a1d488a228c44493811b26feeef6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 755}
+  - name: Tower 08 - Level 03 - Projectile_Frame_1
+    originalName: 
+    pivot: {x: 0.50000006, y: -3.0000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 810
+      width: 26
+      height: 47
+    spriteID: 75cd8727eb6a8b745848a9b72c55b27c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 810}
+  - name: Tower 08 - Level 03 - Projectile_Frame_2
+    originalName: 
+    pivot: {x: 0.5000001, y: -3.0000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 700
+      width: 32
+      height: 47
+    spriteID: 93c7a2d2a5fb92e478d7ea9268fedde7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 700}
+  - name: Tower 08 - Level 03 - Projectile_Frame_3
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.85593224}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 806
+      y: 700
+      width: 118
+      height: 118
+    spriteID: 8eadf39a39b7c1341be6214e62fcb0fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 806, y: 700}
+  - name: Tower 08 - Level 03 - Projectile_Frame_4
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.75}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 500
+      y: 838
+      width: 128
+      height: 128
+    spriteID: c7b90e9b3b41670439d89c6520516da8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 500, y: 838}
+  - name: Tower 08 - Level 03 - Projectile_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 332
+      y: 838
+      width: 160
+      height: 160
+    spriteID: 3d1370168989e4245ba035476a3aedc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 332, y: 838}
+  - name: Tower 08 - Level 03 - Projectile_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: -0.21428573}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 638
+      y: 4
+      width: 224
+      height: 224
+    spriteID: 2a1c37ce6fedc014e8c72e549e0ecbd0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 638, y: 4}
+  - name: Tower 08 - Level 03 - Projectile_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 638
+      y: 700
+      width: 160
+      height: 160
+    spriteID: 09a93282b9dd88c4b9ccf0520d13c8f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 638, y: 700}
+  - name: Tower 08 - Level 03 - Projectile_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.21428573}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 638
+      y: 236
+      width: 224
+      height: 224
+    spriteID: 59a61869d6a28ff449e74273cfd659f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 638, y: 236}
+  - name: Tower 08 - Level 03 - Projectile_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 332
+      y: 310
+      width: 256
+      height: 256
+    spriteID: 62986a83f6872c140979228e8c5a532d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 332, y: 310}
+  - name: Tower 08 - Level 03 - Projectile_Frame_10
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.03691275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 332
+      y: 4
+      width: 298
+      height: 298
+    spriteID: eda015e48fbff3a4fad211fce4d2dd2e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 332, y: 4}
+  - name: Tower 08 - Level 03 - Projectile_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 320
+      height: 320
+    spriteID: c805954fb131c1f478f42f618c0eaf38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Tower 08 - Level 03 - Projectile_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.21428573}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 638
+      y: 468
+      width: 224
+      height: 224
+    spriteID: 15ea305b2004fcc46a05aff9937cc931
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 638, y: 468}
+  - name: Tower 08 - Level 03 - Projectile_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 332
+      y: 574
+      width: 256
+      height: 256
+    spriteID: a80e4b56026462e4a9c1deb7bbf05eb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 332, y: 574}
+  - name: Tower 08 - Level 03 - Projectile_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 660
+      width: 300
+      height: 300
+    spriteID: cc1f40fe52357ca4aa1d29d7823badaf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 660}
+  - name: Tower 08 - Level 03 - Projectile_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 332
+      width: 320
+      height: 320
+    spriteID: 03c02452b76a9004997a99d7d6d8a45e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 332}
+  - name: Tower 08 - Level 03 - Projectile_Frame_16
+    originalName: 
+    pivot: {x: 0.50000006, y: -3.0000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 972
+      y: 700
+      width: 26
+      height: 47
+    spriteID: b406eb1e2af33d54d978325fd4b51f25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 972, y: 700}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -495099645
+    name: Tower 08 - Level 03 - Projectile
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Tower 08 - Level 03 - Projectile_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 147
+        y: 141
+        width: 26
+        height: 47
+      spriteId: c25a1d488a228c44493811b26feeef6c
+    - name: Tower 08 - Level 03 - Projectile_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 147
+        y: 141
+        width: 26
+        height: 47
+      spriteId: 75cd8727eb6a8b745848a9b72c55b27c
+    - name: Tower 08 - Level 03 - Projectile_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 144
+        y: 141
+        width: 32
+        height: 47
+      spriteId: 93c7a2d2a5fb92e478d7ea9268fedde7
+    - name: Tower 08 - Level 03 - Projectile_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 101
+        y: 101
+        width: 118
+        height: 118
+      spriteId: 8eadf39a39b7c1341be6214e62fcb0fb
+    - name: Tower 08 - Level 03 - Projectile_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 96
+        y: 96
+        width: 128
+        height: 128
+      spriteId: c7b90e9b3b41670439d89c6520516da8
+    - name: Tower 08 - Level 03 - Projectile_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 80
+        y: 80
+        width: 160
+        height: 160
+      spriteId: 3d1370168989e4245ba035476a3aedc9
+    - name: Tower 08 - Level 03 - Projectile_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 48
+        y: 48
+        width: 224
+        height: 224
+      spriteId: 2a1c37ce6fedc014e8c72e549e0ecbd0
+    - name: Tower 08 - Level 03 - Projectile_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 80
+        y: 80
+        width: 160
+        height: 160
+      spriteId: 09a93282b9dd88c4b9ccf0520d13c8f6
+    - name: Tower 08 - Level 03 - Projectile_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 48
+        y: 48
+        width: 224
+        height: 224
+      spriteId: 59a61869d6a28ff449e74273cfd659f4
+    - name: Tower 08 - Level 03 - Projectile_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 32
+        y: 32
+        width: 256
+        height: 256
+      spriteId: 62986a83f6872c140979228e8c5a532d
+    - name: Tower 08 - Level 03 - Projectile_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 11
+        y: 11
+        width: 298
+        height: 298
+      spriteId: eda015e48fbff3a4fad211fce4d2dd2e
+    - name: Tower 08 - Level 03 - Projectile_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 320
+        height: 320
+      spriteId: c805954fb131c1f478f42f618c0eaf38
+    - name: Tower 08 - Level 03 - Projectile_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 48
+        y: 48
+        width: 224
+        height: 224
+      spriteId: 15ea305b2004fcc46a05aff9937cc931
+    - name: Tower 08 - Level 03 - Projectile_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 32
+        y: 32
+        width: 256
+        height: 256
+      spriteId: a80e4b56026462e4a9c1deb7bbf05eb8
+    - name: Tower 08 - Level 03 - Projectile_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 10
+        y: 10
+        width: 300
+        height: 300
+      spriteId: cc1f40fe52357ca4aa1d29d7823badaf
+    - name: Tower 08 - Level 03 - Projectile_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: 0
+        width: 320
+        height: 320
+      spriteId: 03c02452b76a9004997a99d7d6d8a45e
+    - name: Tower 08 - Level 03 - Projectile_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 147
+        y: 141
+        width: 26
+        height: 47
+      spriteId: b406eb1e2af33d54d978325fd4b51f25
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 320, y: 320}
