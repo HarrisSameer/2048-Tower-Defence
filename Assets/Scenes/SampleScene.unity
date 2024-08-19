@@ -439,47 +439,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerDatas:
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: 1844817881, guid: 8ceb9d22dbb69be45842118be1747b1f, type: 3}
     attackRange: 1
     attackSpeed: 2
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: -56141563, guid: 8ceb9d22dbb69be45842118be1747b1f, type: 3}
     attackRange: 1
     attackSpeed: 2
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: -389727763, guid: 8ceb9d22dbb69be45842118be1747b1f, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: 1365456951, guid: d9cf2568834e9b3429069efac0d5f9be, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: 1174602931, guid: d9cf2568834e9b3429069efac0d5f9be, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: 985147894, guid: d9cf2568834e9b3429069efac0d5f9be, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: -1509544616, guid: c8e9e619a4bb63047a9f9b7cdd4e1a65, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: 757505658, guid: c8e9e619a4bb63047a9f9b7cdd4e1a65, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: 37096181, guid: c8e9e619a4bb63047a9f9b7cdd4e1a65, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: -1325178691, guid: bef5932e0acace0448dd8c7244534f8f, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
-  - towerSprite: {fileID: 21300000, guid: f5f51eb9bf5ede84f9560ba4afba4fe0, type: 3}
+  - towerSprite: {fileID: -758127551, guid: bef5932e0acace0448dd8c7244534f8f, type: 3}
     attackRange: 0
     attackSpeed: 0
     bulletPrefab: {fileID: 0}
