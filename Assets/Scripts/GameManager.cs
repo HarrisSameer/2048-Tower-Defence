@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using DG.Tweening;
+using UnityEditor.Animations;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class GameManager : MonoBehaviour
     private List<Block> _blocks;
     private GameState _state;
     private int _round;
+    [SerializeField] private Sprite _mainTowerSprite;
+    [SerializeField] private AnimatorController CentreTowerAnimation;
+
 
     private BlockType GetBlockTypeByValue(int value) => _types.FirstOrDefault(t => t.Value == value);
 
@@ -87,7 +91,12 @@ public class GameManager : MonoBehaviour
                 if (x == _width / 2 && y == _height / 2)
                 {
                     node.IsStatic = true; // Set IsStatic to true for the center node
-                    node.SetColor(Color.black); // Set the color to black for the static node
+                    node.SetColor(Color.white); // Set the color to black for the static node
+                    node.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = _mainTowerSprite;
+                    node.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "MainTower";
+                    node.gameObject.transform.GetChild(0).transform.position = new Vector3(node.gameObject.transform.GetChild(0).transform.position.x, node.gameObject.transform.GetChild(0).transform.position.y + 0.5f, node.gameObject.transform.GetChild(0).transform.position.z);
+                    node.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.AddComponent<Animator>();
+                    node.gameObject.GetComponentInChildren<Animator>().runtimeAnimatorController= CentreTowerAnimation;
                 }
                 //else
                 //{

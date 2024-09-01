@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Block : MonoBehaviour
@@ -15,16 +16,29 @@ public class Block : MonoBehaviour
     [SerializeField] private TextMeshPro _text;
 
     // Tower attributes
+    private Tower _tower;
+    private SpriteRenderer _weaponRenderer;
+    private Vector3 _weaponPosition;
+    private Animator _weaponAnimator;
+
     public Sprite TowerSprite { get; private set; }
     public float AttackRange { get; private set; }
     public float AttackSpeed { get; private set; }
     public GameObject BulletPrefab { get; private set; }
+    public Sprite WeaponSprite { get; private set; }
+    public Vector3 WeaponPosition { get; private set; }
+    public RuntimeAnimatorController WeaponAnimatorController { get; private set; }
 
     public void Init(BlockType type)
     {
         Value = type.Value;
         _renderer.color = type.Color;
         _text.text = type.Value.ToString();
+
+        // Initialize the weapon renderer and animator (assumes a child object named "Weapon")
+        _weaponRenderer = transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>();
+        _weaponPosition = transform.GetChild(0).transform.GetChild(0).transform.position;
+        _weaponAnimator = transform.GetChild(0).transform.GetChild(0).AddComponent<Animator>();
 
         // Initialize tower attributes based on the block value
         SetTowerAttributes(TowerManager.Instance.GetTowerData(Value));
@@ -63,8 +77,34 @@ public class Block : MonoBehaviour
         AttackRange = towerData.attackRange;
         AttackSpeed = towerData.attackSpeed;
         BulletPrefab = towerData.bulletPrefab;
+        WeaponSprite = towerData.weaponSprite;
+        WeaponPosition = towerData.weaponOffset;
+        WeaponAnimatorController = towerData.weaponAnimController; // Get Animator Controller
 
         // Update the block's visual representation with the new tower sprite
         _renderer.sprite = TowerSprite;
+
+        // Update the weapon's sprite and position
+        if (_weaponRenderer != null)
+        {
+            _weaponRenderer.sprite = WeaponSprite;
+            _weaponRenderer.transform.localPosition = WeaponPosition;
+        }
+
+        // Update the weapon's Animator Controller
+        if (_weaponAnimator != null)
+        {
+            _weaponAnimator.runtimeAnimatorController = WeaponAnimatorController;
+        }
+
+        // Add or update the Tower component
+        if (_tower == null)
+        {
+            _tower = gameObject.AddComponent<Tower>();
+        }
+
+        _tower.AttackRange = AttackRange;
+        _tower.AttackSpeed = AttackSpeed;
+        _tower.BulletPrefab = BulletPrefab;
     }
 }
