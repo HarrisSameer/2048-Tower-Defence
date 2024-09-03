@@ -93,7 +93,8 @@ public class GameManager : MonoBehaviour
                     node.IsStatic = true; // Set IsStatic to true for the center node
                     node.SetColor(Color.white); // Set the color to black for the static node
                     node.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = _mainTowerSprite;
-                    node.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "MainTower";
+                    //node.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "MainTower";
+                    node.gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 4;
                     node.gameObject.transform.GetChild(0).transform.position = new Vector3(node.gameObject.transform.GetChild(0).transform.position.x, node.gameObject.transform.GetChild(0).transform.position.y + 0.5f, node.gameObject.transform.GetChild(0).transform.position.z);
                     node.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.AddComponent<Animator>();
                     node.gameObject.GetComponentInChildren<Animator>().runtimeAnimatorController= CentreTowerAnimation;
