@@ -80,12 +80,15 @@ public class Tower : MonoBehaviour
 
     private void FireAtEnemy(Enemy targetEnemy)
     {
-        if (BulletPrefab != null)
+        if (BulletPoolingManager.Instance != null)
         {
-            weaponAnimator.SetTrigger("Fire");
-            GameObject bullet = Instantiate(BulletPrefab, weaponTransform.position, Quaternion.identity);
-            Bullet bulletScript = bullet.GetComponent<Bullet>();
-            bulletScript.SetTarget(targetEnemy, weaponTransform);
+            Bullet bullet = BulletPoolingManager.Instance.GetBullet(blockStats.Value);
+            if (bullet != null)
+            {
+                weaponAnimator.SetTrigger("Fire");
+                bullet.transform.position = weaponTransform.position;
+                bullet.SetTarget(targetEnemy, weaponTransform, blockStats.Value);
+            }
         }
     }
 

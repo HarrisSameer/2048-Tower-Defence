@@ -6,19 +6,21 @@ public class Bullet : MonoBehaviour
     private Enemy _target;
     [SerializeField] private float _bulletDamage = 1f;
     private Transform _weapon;
+    private int _towerValue;
 
     // Set target and reference to the weapon
-    public void SetTarget(Enemy target, Transform weapon)
+    public void SetTarget(Enemy target, Transform weapon, int towerValue)
     {
         _target = target;
         _weapon = weapon;
+        _towerValue = towerValue; // Store the tower value to identify the pool
     }
 
     void Update()
     {
         if (_target == null)
         {
-            Destroy(gameObject);
+            ReturnToPool();
             return;
         }
 
@@ -52,7 +54,7 @@ public class Bullet : MonoBehaviour
         {
             _target.TakeDamage(_bulletDamage);
         }
-        Destroy(gameObject);
+        ReturnToPool();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -61,6 +63,19 @@ public class Bullet : MonoBehaviour
         {
             _target.TakeDamage(_bulletDamage);
         }
-        Destroy(gameObject);
+        ReturnToPool();
+    }
+
+    private void ReturnToPool()
+    {
+        // Return the bullet to the pool instead of destroying it
+        if (BulletPoolingManager.Instance != null)
+        {
+            BulletPoolingManager.Instance.ReturnBullet(_towerValue, this);
+        }
+        else
+        {
+            Destroy(gameObject); // Fallback in case the pooling manager isn't found
+        }
     }
 }

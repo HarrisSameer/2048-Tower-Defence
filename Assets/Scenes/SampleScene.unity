@@ -612,35 +612,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerDatas:
   - towerSprite: {fileID: 1844817881, guid: 8ceb9d22dbb69be45842118be1747b1f, type: 3}
-    attackRange: 2
+    attackRange: 5
     attackSpeed: 1
     bulletPrefab: {fileID: 8851366957276335552, guid: d754be6f725d4724598ca3f0d8726fd3, type: 3}
     weaponSprite: {fileID: 825549033, guid: e70811876a76dde4cac1374d1c31e3ed, type: 3}
     weaponOffset: {x: 0.016, y: 0.063, z: 0}
     weaponAnimController: {fileID: 9100000, guid: c1aa01bdf6b2ef144aabdc0911033b76, type: 2}
   - towerSprite: {fileID: -56141563, guid: 8ceb9d22dbb69be45842118be1747b1f, type: 3}
-    attackRange: 2
+    attackRange: 5
     attackSpeed: 1
     bulletPrefab: {fileID: 8851366957276335552, guid: d754be6f725d4724598ca3f0d8726fd3, type: 3}
     weaponSprite: {fileID: 825549033, guid: e70811876a76dde4cac1374d1c31e3ed, type: 3}
     weaponOffset: {x: 0.016, y: 0.092, z: 0}
     weaponAnimController: {fileID: 9100000, guid: c1aa01bdf6b2ef144aabdc0911033b76, type: 2}
   - towerSprite: {fileID: -389727763, guid: 8ceb9d22dbb69be45842118be1747b1f, type: 3}
-    attackRange: 3
+    attackRange: 5
     attackSpeed: 1
     bulletPrefab: {fileID: 8851366957276335552, guid: d754be6f725d4724598ca3f0d8726fd3, type: 3}
     weaponSprite: {fileID: 825549033, guid: e70811876a76dde4cac1374d1c31e3ed, type: 3}
     weaponOffset: {x: 0.016, y: 0.263, z: 0}
     weaponAnimController: {fileID: 9100000, guid: c1aa01bdf6b2ef144aabdc0911033b76, type: 2}
   - towerSprite: {fileID: 1365456951, guid: d9cf2568834e9b3429069efac0d5f9be, type: 3}
-    attackRange: 4
+    attackRange: 5
     attackSpeed: 1
     bulletPrefab: {fileID: 8851366957276335552, guid: 40f94d121c02fc1478a951f0055f912a, type: 3}
     weaponSprite: {fileID: 807119500, guid: 0e0a412151387df4b9821426b8f1a988, type: 3}
     weaponOffset: {x: 0.016, y: 0.263, z: 0}
     weaponAnimController: {fileID: 9100000, guid: a4caa2ec78bb5394da1901a552c44728, type: 2}
   - towerSprite: {fileID: 1174602931, guid: d9cf2568834e9b3429069efac0d5f9be, type: 3}
-    attackRange: 4
+    attackRange: 5
     attackSpeed: 1
     bulletPrefab: {fileID: 8851366957276335552, guid: 83a03c7cfaa052d44b31bfbd312637bf, type: 3}
     weaponSprite: {fileID: 0}
@@ -896,9 +896,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7805428781319575610, guid: 8663b069f17042d4abe5ae239b5920b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 867596276}
-    - targetCorrespondingSourceObject: {fileID: 5986466412520962269, guid: 8663b069f17042d4abe5ae239b5920b8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8663b069f17042d4abe5ae239b5920b8, type: 3}
 --- !u!1 &1039793141
 GameObject:
@@ -1312,6 +1309,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674605883}
   m_CullTransparentMesh: 1
+--- !u!1 &1868439599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1868439601}
+  - component: {fileID: 1868439600}
+  m_Layer: 0
+  m_Name: Bullet Pooling Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1868439600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868439599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2034325b5fd40e344be759306e12c8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPools:
+  - towerValue: 2
+    bulletPrefab: {fileID: 8851366957276335552, guid: d754be6f725d4724598ca3f0d8726fd3, type: 3}
+    poolSize: 10
+  - towerValue: 4
+    bulletPrefab: {fileID: 8851366957276335552, guid: d754be6f725d4724598ca3f0d8726fd3, type: 3}
+    poolSize: 10
+  - towerValue: 8
+    bulletPrefab: {fileID: 8851366957276335552, guid: d754be6f725d4724598ca3f0d8726fd3, type: 3}
+    poolSize: 10
+  - towerValue: 16
+    bulletPrefab: {fileID: 8851366957276335552, guid: 40f94d121c02fc1478a951f0055f912a, type: 3}
+    poolSize: 10
+  - towerValue: 32
+    bulletPrefab: {fileID: 8851366957276335552, guid: 83a03c7cfaa052d44b31bfbd312637bf, type: 3}
+    poolSize: 10
+  - towerValue: 64
+    bulletPrefab: {fileID: 8851366957276335552, guid: 83a03c7cfaa052d44b31bfbd312637bf, type: 3}
+    poolSize: 10
+  - towerValue: 128
+    bulletPrefab: {fileID: 8851366957276335552, guid: 99e5ea5e02c2e334897afc2a69edbe26, type: 3}
+    poolSize: 10
+  - towerValue: 256
+    bulletPrefab: {fileID: 8851366957276335552, guid: f1d5b99d1ca99aa40b37454d38309f98, type: 3}
+    poolSize: 10
+  - towerValue: 512
+    bulletPrefab: {fileID: 8851366957276335552, guid: 3564f13257797c94cab6e66b4e0e88cb, type: 3}
+    poolSize: 10
+  - towerValue: 1024
+    bulletPrefab: {fileID: 8851366957276335552, guid: d55ee40f16efbdf4f9f239cfa1d9e6cf, type: 3}
+    poolSize: 10
+  - towerValue: 2048
+    bulletPrefab: {fileID: 8851366957276335552, guid: d55ee40f16efbdf4f9f239cfa1d9e6cf, type: 3}
+    poolSize: 10
+--- !u!4 &1868439601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868439599}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1323,3 +1398,4 @@ SceneRoots:
   - {fileID: 801022230}
   - {fileID: 298067201}
   - {fileID: 968838001}
+  - {fileID: 1868439601}
