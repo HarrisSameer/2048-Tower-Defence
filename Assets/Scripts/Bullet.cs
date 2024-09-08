@@ -4,9 +4,18 @@ public class Bullet : MonoBehaviour
 {
     public float Speed = 5f;
     private Enemy _target;
+    private Vector2 _lastTargetPosition;  // Store the last known position of the target
     [SerializeField] private float _bulletDamage = 1f;
     private Transform _weapon;
     private int _towerValue;
+    private bool _targetLost = false; // Track if the target has been lost
+
+    Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     // Set target and reference to the weapon
     public void SetTarget(Enemy target, Transform weapon, int towerValue)
@@ -14,20 +23,28 @@ public class Bullet : MonoBehaviour
         _target = target;
         _weapon = weapon;
         _towerValue = towerValue; // Store the tower value to identify the pool
+        _targetLost = false; // Reset the target lost state
+        if (_target != null)
+        {
+            _lastTargetPosition = _target.transform.position; // Initialize the last target position
+        }
     }
 
     void Update()
     {
-        if (_target == null)
+        // If the target has been destroyed or lost, set to move towards the last known position
+        if (_target == null && !_targetLost)
         {
-            ReturnToPool();
-            return;
+            _targetLost = true; // Mark the target as lost
         }
 
-        // Calculate the direction towards the enemy
-        Vector2 direction = (_target.transform.position - transform.position).normalized;
+        // Determine the position to move towards (either target or last known position)
+        Vector2 targetPosition = _targetLost ? _lastTargetPosition : _target.transform.position;
 
-        // Rotate the weapon to face the direction of the enemy
+        // Calculate the direction towards the target or last known position
+        Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+
+        // Rotate the weapon to face the direction of the target or last position
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (_weapon != null)
         {
@@ -37,11 +54,11 @@ public class Bullet : MonoBehaviour
         // Rotate the bullet to face the direction of movement
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        // Move the bullet towards the enemy
+        // Move the bullet towards the target or last known position
         transform.Translate(Vector2.right * Speed * Time.deltaTime);
 
-        // Check if the bullet has reached the enemy
-        if (Vector2.Distance(transform.position, _target.transform.position) < 0.1f)
+        // Check if the bullet has reached the target or the last known position
+        if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
         {
             HitTarget();
         }
@@ -49,8 +66,8 @@ public class Bullet : MonoBehaviour
 
     private void HitTarget()
     {
-        // Implement damage logic here
-        if (_target != null)
+        // Implement damage logic here if the target wasn't lost
+        if (!_targetLost && _target != null)
         {
             _target.TakeDamage(_bulletDamage);
         }
@@ -59,10 +76,15 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (_target != null)
+        if (!_targetLost && _target != null)
         {
             _target.TakeDamage(_bulletDamage);
         }
+
+        //_animator.SetTrigger("IsImpact");
+
+        //Invoke("ReturnToPool",0.5f);
+
         ReturnToPool();
     }
 

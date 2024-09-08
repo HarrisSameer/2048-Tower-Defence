@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using DG.Tweening;
 using UnityEditor.Animations;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,8 +25,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite _mainTowerSprite;
     [SerializeField] private AnimatorController CentreTowerAnimation;
 
+    //public NavMeshManager m_NavMeshManager;
+    public Transform centreTowerTransform;
 
     private BlockType GetBlockTypeByValue(int value) => _types.FirstOrDefault(t => t.Value == value);
+
+    public static GameManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else { 
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -98,6 +114,9 @@ public class GameManager : MonoBehaviour
                     node.gameObject.transform.GetChild(0).transform.position = new Vector3(node.gameObject.transform.GetChild(0).transform.position.x, node.gameObject.transform.GetChild(0).transform.position.y + 0.5f, node.gameObject.transform.GetChild(0).transform.position.z);
                     node.gameObject.GetComponentInChildren<SpriteRenderer>().gameObject.AddComponent<Animator>();
                     node.gameObject.GetComponentInChildren<Animator>().runtimeAnimatorController= CentreTowerAnimation;
+                    node.gameObject.tag = "CenterTower";
+                    node.gameObject.AddComponent<BoxCollider2D>();
+                    centreTowerTransform = node.gameObject.transform;
                 }
                 //else
                 //{
@@ -138,6 +157,8 @@ public class GameManager : MonoBehaviour
         block.Init(GetBlockTypeByValue(value));
         block.SetBlock(node);
         _blocks.Add(block);
+
+        //m_NavMeshManager.BakeNavMesh();
     }
 
     GameState CheckEndGame()
